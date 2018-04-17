@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: shafin_invoice
+        psr4_prefix: shafin_invoice
+        src_path: app
