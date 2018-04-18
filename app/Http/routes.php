@@ -26,5 +26,5 @@ Route::get('/login-form', function(){
 Route::post('/user/login','LoginController@Login');
 
 Route::get('/login-dashboard', function(){
-	return view('login.login');
+	return view('layout.dashboard');
 });
