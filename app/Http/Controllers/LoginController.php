@@ -21,6 +21,7 @@ class LoginController extends Controller {
 			$count = count($login);
 			if($count==1)
 			{
+				return redirect('/login-dashboard');
 				echo " done ";
 			}else{
 				$request->session()->flash('invalide','data dose not match site');
