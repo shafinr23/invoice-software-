@@ -17,10 +17,17 @@ class LoginController extends Controller {
 			//echo "your pass is : ".$password;
 
 			$login = DB::select('select * from login where password=?',[$password]);
-
+				$username_get;
+				$imagurl_get;
+			foreach($login as $user){
+				$username_get=$user->username;
+				$imagurl_get=$user->img_url;
+			}
 			$count = count($login);
 			if($count==1)
 			{
+				$request->session()->put('logedin',$username_get);
+				$request->session()->put('imagurl_get',$imagurl_get);
 				return redirect('/login-dashboard');
 				echo " done ";
 			}else{

@@ -85,8 +85,8 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="{{asset("/dashboard/dist/img/user2-160x160.jpg")}}" class="user-image" alt="User Image">
-              <span class="hidden-xs">Hadi Jaman</span>
+              <img src="{{asset('imagurl_get')}}" class="user-image" alt="User Image">
+            <span class="hidden-xs">{{Session::get('logedin')}}</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
@@ -94,7 +94,7 @@
                 <img src="{{asset("/dashboard/dist/img/user2-160x160.jpg")}}" class="img-circle" alt="User Image">
 
                 <p>
-                  Hadi Jaman - Web Developer
+                  {{Session::get('logedin')}} - Web Developer
                   <small>Member since Nov. 2018</small>
                 </p>
               </li>
@@ -135,12 +135,13 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
+      <?php echo $img = Session::get('imagurl_get'); ?>
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="{{Session::get(".$img.")}}" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>Hadi Jaman</p>
+          <p>{{Session::get('logedin')}}</p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
