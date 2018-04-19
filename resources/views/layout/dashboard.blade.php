@@ -172,15 +172,22 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  
-   <div class="content-wrapper">
+  <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    
+   
 
     <!-- Main content -->
-    
-    <!-- /.content -->
-  </div>
+    <section class="content">
+      <!-- Small boxes (Stat box) -->
+      @yield('content')
+      <!-- /.row -->
+      <!-- Main row -->
+      
+      <!-- /.row (main row) -->
+
+    </section>
+
+
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
