@@ -49,7 +49,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="index2.html" class="logo">
+    <a href="{{url('/login-dashboard')}}" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
      
       <!-- logo for regular state and mobile devices -->
@@ -159,7 +159,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-user"></i>All Users</a></li>
+            <li class="active"><a href="{{url('/user_list')}}"><i class="fa fa-user"></i>All Users</a></li>
             <li><a href="general.html"><i class="fa fa-user"></i> Add New User</a></li>
           </ul>
         </li>

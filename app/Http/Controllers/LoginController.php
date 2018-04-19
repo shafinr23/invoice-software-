@@ -28,8 +28,8 @@ class LoginController extends Controller {
 			{
 				$request->session()->put('logedin',$username_get);
 				$request->session()->put('imagurl_get',$imagurl_get);
-				return redirect()->action('LoginController@index');
-				echo " done ";
+				return redirect('/login-dashboard');
+
 			}else{
 				$request->session()->flash('invalide','data dose not match site');
 				return redirect('/login-form');
