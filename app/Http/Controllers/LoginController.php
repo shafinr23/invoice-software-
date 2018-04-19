@@ -28,7 +28,7 @@ class LoginController extends Controller {
 			{
 				$request->session()->put('logedin',$username_get);
 				$request->session()->put('imagurl_get',$imagurl_get);
-				return redirect('/login-dashboard');
+				return redirect()->action('LoginController@index');
 				echo " done ";
 			}else{
 				$request->session()->flash('invalide','data dose not match site');
@@ -88,6 +88,12 @@ class LoginController extends Controller {
 	
 			
 		}
+		public function index(){
+			$user_list = DB::select('select * from login');
+			
+			return view ('users/user-list');
+		}
+		
 			
 	
 }
