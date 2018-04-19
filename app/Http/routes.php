@@ -28,3 +28,12 @@ Route::post('/user/login','LoginController@Login');
 Route::get('/login-dashboard', function(){
 	return view('layout.dashboard');
 });
+
+
+Route::get('/reg',function(){
+	return view ('reg.reg');
+});
+Route::post('/user/reg','LoginController@reg');
+Route::get('/reg-se',function(){
+	return view ('login.login');
+});
